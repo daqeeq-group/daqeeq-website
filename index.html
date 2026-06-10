@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daqeeq — Precision discovery for Kuwait</title>
+  <meta name="description" content="Daqeeq is a two-sided platform for Kuwait: a consumer app for discovering restaurants and places with Sabi AI, and a unified analytics hub for businesses." />
+  <meta property="og:title" content="Daqeeq — Precision discovery for Kuwait" />
+  <meta property="og:description" content="One platform connecting people to places — and places to the data that grows them." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://daqeeqgroup.com" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23111111'/%3E%3Cg transform='translate(12 12) scale(0.76)'%3E%3Cpath d='M4 32 H26 L44 50 L26 68 H4 L22 50 Z' fill='%23F8FAFB'/%3E%3Cpath d='M34 6 H64 L96 38 V62 L64 94 H34 L78 50 Z' fill='%23F8FAFB'/%3E%3Cpath d='M96 38 L96 62 L78 50 Z' fill='%23B9C0C7'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=5" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand" aria-label="Daqeeq home">
+        <img class="nav__logo" src="/assets/img/logo.png" alt="Daqeeq" />
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#products">Products</a>
+        <a href="#sabi">Sabi&nbsp;AI</a>
+        <a href="#why">Why&nbsp;Daqeeq</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="mailto:info@daqeeqgroup.com" class="btn btn--small btn--blue btn--cta nav__cta">
+        <span class="btn__label">Get in touch</span>
+        <i class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6" /></svg></i>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Shared SVG filter for the ethereal shadow effect -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="ethereal">
+          <feTurbulence result="undulation" numOctaves="2" baseFrequency="0.0005,0.002" seed="0" type="turbulence" />
+          <feColorMatrix id="ethereal-hue" in="undulation" type="hueRotate" values="180" />
+          <feColorMatrix in="dist" result="circulation" type="matrix" values="4 0 0 0 1  4 0 0 0 1  4 0 0 0 1  1 0 0 0 0" />
+          <feDisplacementMap in="SourceGraphic" in2="circulation" scale="100" result="dist" />
+          <feDisplacementMap in="dist" in2="undulation" scale="100" result="output" />
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="ethereal" aria-hidden="true">
+        <div class="ethereal__motion"><div class="ethereal__shadow"></div></div>
+        <div class="ethereal__noise"></div>
+      </div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <h1 class="hero__title" data-reveal>
+          Precision discovery<br /><span class="hero__title-accent">for Kuwait.</span>
+        </h1>
+        <p class="hero__sub" data-reveal>
+          One platform connecting people to places and places to the data that grows them.
+        </p>
+        <div class="hero__actions" data-reveal>
+          <a href="#products" class="btn btn--blue btn--cta">
+            <span class="btn__label">Explore the platform</span>
+            <i class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6" /></svg></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ESSENCE ===== -->
+    <section class="essence">
+      <div class="container">
+        <div class="essence__row" data-reveal-group>
+          <span data-reveal>Premium</span>
+          <span data-reveal>Precise</span>
+          <span data-reveal>Modern</span>
+          <span data-reveal>Local</span>
+          <span data-reveal>Intelligent</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLATFORM INTRO ===== -->
+    <section class="intro" id="platform">
+      <div class="container">
+        <p class="eyebrow" data-reveal>The platform</p>
+        <h2 class="h2" data-reveal>Discover more. <span class="text-blue">Precisely.</span></h2>
+        <p class="lead" data-reveal>
+          Daqeeq is a two-sided platform built in Kuwait. People use it to find their next
+          favorite place. Businesses use it to understand exactly how they're discovered
+          on Daqeeq and everywhere else.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products" id="products">
+      <div class="container">
+
+        <!-- Product 1: Mobile -->
+        <article class="product">
+          <div class="product__text" data-reveal>
+            <p class="product__num">01</p>
+            <p class="eyebrow eyebrow--blue">Daqeeq Mobile</p>
+            <h3 class="h3">Your next favorite place, found by asking.</h3>
+            <p class="body">
+              A consumer app for exploring Kuwait by map, by search, or simply by
+              speaking to Sabi, Daqeeq's voice AI.
+            </p>
+            <ul class="feature-list">
+              <li><span class="dot"></span><div><strong>Live map discovery</strong><em>Explore restaurants and venues around you, in real time.</em></div></li>
+              <li><span class="dot"></span><div><strong>Natural-language search</strong><em>Search by name, cuisine, vibe — or describe what you're craving.</em></div></li>
+              <li><span class="dot"></span><div><strong>Sabi voice AI</strong><em>“Late-night burgers near Salmiya” — answered with places, hours, and directions.</em></div></li>
+            </ul>
+          </div>
+          <div class="product__visual" data-reveal>
+            <img class="product__shot" src="/assets/img/app-review.png" alt="Daqeeq app showing a restaurant review with a Daqeeq Rating" loading="lazy" />
+          </div>
+        </article>
+
+        <!-- Product 2: Business -->
+        <article class="product product--flip">
+          <div class="product__text" data-reveal>
+            <p class="product__num">02</p>
+            <p class="eyebrow eyebrow--blue">Daqeeq Business</p>
+            <h3 class="h3">Every channel. One dashboard.</h3>
+            <p class="body">
+              A web dashboard where businesses see how customers discover them on Daqeeq
+              blended with Instagram, TikTok, and Google in a single unified view.
+            </p>
+            <ul class="feature-list">
+              <li><span class="dot"></span><div><strong>Native discovery analytics</strong><em>Profile views, saves, calls, directions, delivery taps — and what converts.</em></div></li>
+              <li><span class="dot"></span><div><strong>Connected platforms</strong><em>Link Instagram, TikTok, and Google My Business with one click.</em></div></li>
+              <li><span class="dot"></span><div><strong>AI insights chat</strong><em>Ask questions about your unified data and get actionable answers.</em></div></li>
+              <li><span class="dot"></span><div><strong>Reports &amp; export</strong><em>Clean PDF and CSV reports for your team, partners, and investors.</em></div></li>
+            </ul>
+          </div>
+          <div class="product__visual" data-reveal>
+            <div class="mac">
+              <div class="mac__screen">
+                <span class="mac__camera" aria-hidden="true"></span>
+                <img src="/assets/img/dashboard.png" alt="Daqeeq Business dashboard showing unified analytics" loading="lazy" />
+              </div>
+              <div class="mac__base" aria-hidden="true"></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== SABI ===== -->
+    <section class="sabi" id="sabi">
+      <div class="ethereal" aria-hidden="true">
+        <div class="ethereal__motion"><div class="ethereal__shadow"></div></div>
+        <div class="ethereal__noise"></div>
+      </div>
+      <div class="container sabi__inner">
+        <p class="eyebrow eyebrow--light" data-reveal>Sabi AI</p>
+        <h2 class="h2 h2--light" data-reveal>Just ask. <span class="text-blue">Sabi knows.</span></h2>
+        <p class="lead lead--light" data-reveal>
+          Sabi understands intent, location, time of day, and season then answers
+          with real places, live hours, and directions.
+        </p>
+        <div class="chat">
+          <div class="chat__bubble chat__bubble--user" data-reveal>
+            At home in Mishref, tired and hungry. Fast burger with dessert, only Talabat or Jahez.
+          </div>
+          <div class="chat__bubble chat__bubble--sabi" data-reveal>
+            <span class="chat__orb" aria-hidden="true"></span>
+            <div>Got it — searching Mishref. Confirm your block?</div>
+          </div>
+          <div class="chat__bubble chat__bubble--user" data-reveal>Block 4</div>
+          <div class="chat__bubble chat__bubble--sabi" data-reveal>
+            <span class="chat__orb" aria-hidden="true"></span>
+            <div>Here are matches that deliver to Mishref Block 4:</div>
+          </div>
+          <div class="chat__card" data-reveal>
+            <span class="chat__card-avatar" aria-hidden="true">11</span>
+            <div>
+              <strong>11 Woodfire</strong>
+              <em>★ 4.5 · Burgers · ~25 min · Dessert ✓</em>
+              <div class="chat__tags"><span>Talabat</span><span>Jahez</span></div>
+            </div>
+          </div>
+          <div class="chat__card" data-reveal>
+            <span class="chat__card-avatar" aria-hidden="true">HB</span>
+            <div>
+              <strong>Hundred Burgers</strong>
+              <em>★ 4.6 · Burgers · ~30 min · Dessert ✓</em>
+              <div class="chat__tags"><span>Talabat</span></div>
+            </div>
+          </div>
+          <div class="chat__suggest" data-reveal>
+            <span class="chat__suggest-label">Sabi suggests</span>
+            <p>Want me to open Talabat for 11 Woodfire?</p>
+            <div class="chat__actions"><span>Open Talabat</span><span>Not now</span></div>
+          </div>
+          <div class="chat__input" data-reveal>
+            <span>Ask Sabi anything…</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <rect x="9" y="3" width="6" height="11" rx="3" />
+              <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY ===== -->
+    <section class="why" id="why">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Why Daqeeq</p>
+        <h2 class="h2" data-reveal>Four logins.<br />Or <span class="text-blue">one.</span></h2>
+        <p class="lead" data-reveal>
+          Today, a restaurant checks Instagram for social, TikTok for video, Google for
+          reviews, and still can't see what actually drives customers. Daqeeq unifies all
+          of it discovery, social, and reviews into one intelligent hub.
+        </p>
+        <div class="why__grid" data-reveal-group>
+          <div class="why__card" data-reveal><strong>Unified data</strong><em>Daqeeq metrics blended with every platform you already use.</em></div>
+          <div class="why__card" data-reveal><strong>Real conversions</strong><em>Not just views calls, directions, orders, and saves.</em></div>
+          <div class="why__card" data-reveal><strong>AI that reasons</strong><em>Ask why something changed and get the root cause, not a chart.</em></div>
+          <div class="why__card" data-reveal><strong>Built for Kuwait</strong><em>Local context first areas, seasons, Ramadan, and what's trending.</em></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== CONTACT + FOOTER (shared animated background) ===== -->
+  <div class="dark-tail">
+    <div class="ethereal" aria-hidden="true">
+      <div class="ethereal__motion"><div class="ethereal__shadow"></div></div>
+      <div class="ethereal__noise"></div>
+    </div>
+
+    <section class="contact" id="contact">
+      <div class="container contact__inner">
+        <p class="eyebrow eyebrow--light" data-reveal>Contact</p>
+        <h2 class="h2 h2--light" data-reveal>Let's talk.</h2>
+        <p class="lead lead--light" data-reveal>
+          Partnerships, early access, press, or anything else we'd love to hear from you.
+        </p>
+        <a class="contact__email" href="mailto:info@daqeeqgroup.com" data-reveal>info@daqeeqgroup.com</a>
+        <p class="contact__loc" data-reveal>Kuwait City, Kuwait</p>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img class="footer__logo" src="/assets/img/logo.png" alt="Daqeeq" />
+      </div>
+      <p class="footer__tag">Built in Kuwait. Designed for the world.</p>
+      <nav class="footer__links" aria-label="Legal">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="mailto:info@daqeeqgroup.com">Contact</a>
+      </nav>
+      <p class="footer__copy">© <span id="year">2026</span> Daqeeq. All rights reserved.</p>
+    </div>
+    </footer>
+  </div>
+
+  <script src="/assets/js/main.js?v=4" defer></script>
+</body>
+</html>
