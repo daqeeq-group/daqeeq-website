@@ -52,7 +52,6 @@ ul { list-style: none; }
   transform: translateY(36px);
   transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
   transition-delay: var(--d, 0s);
-  will-change: opacity, transform;
 }
 [data-reveal].in-view {
   opacity: 1;
@@ -173,13 +172,21 @@ ul { list-style: none; }
   padding: 0.45rem 0.55rem 0.45rem 1.4rem;
   border-radius: 999px;
   background: rgba(17, 17, 17, 0.55);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(248, 250, 251, 0.08);
   transition: background 0.4s var(--ease);
 }
 .nav.is-scrolled .nav__inner {
   background: rgba(17, 17, 17, 0.85);
+}
+/* backdrop blur repaints on every scroll frame — too costly on phones */
+@media (max-width: 760px) {
+  .nav__inner {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(17, 17, 17, 0.92);
+  }
 }
 .nav__brand {
   display: flex;
@@ -202,7 +209,11 @@ ul { list-style: none; }
   .nav__links { display: none; }
 }
 
-/* ---------- Ethereal shadow effect (dark sections) ---------- */
+/* ---------- Ethereal shadow effect (dark sections) ----------
+   The silk texture is a pre-blurred alpha mask; motion is a slow
+   GPU-composited transform drift (the original animated SVG
+   displacement filter re-rendered the full section on the CPU
+   every frame and made mobile unusable). */
 .ethereal {
   position: absolute;
   inset: 0;
@@ -211,15 +222,21 @@ ul { list-style: none; }
 }
 .ethereal__motion {
   position: absolute;
-  inset: -100px;
-  filter: url(#ethereal) blur(4px);
+  inset: -6%;
+  animation: ethereal-drift 38s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes ethereal-drift {
+  0% { transform: translate3d(-2%, -1.5%, 0) scale(1.08); }
+  50% { transform: translate3d(1.5%, 1%, 0) scale(1.16); }
+  100% { transform: translate3d(-1%, 2%, 0) scale(1.1); }
 }
 .ethereal__shadow {
   width: 100%;
   height: 100%;
   background-color: rgba(128, 128, 128, 1);
-  mask-image: url("/assets/img/ethereal-mask.png");
-  -webkit-mask-image: url("/assets/img/ethereal-mask.png");
+  mask-image: url("/assets/img/ethereal-mask.webp");
+  -webkit-mask-image: url("/assets/img/ethereal-mask.webp");
   mask-size: cover;
   -webkit-mask-size: cover;
   mask-repeat: no-repeat;
@@ -230,13 +247,13 @@ ul { list-style: none; }
 .ethereal__noise {
   position: absolute;
   inset: 0;
-  background-image: url("/assets/img/noise.png");
-  background-size: 240px;
+  background-image: url("/assets/img/noise-sm.png");
+  background-size: 154px;
   background-repeat: repeat;
   opacity: 0.5;
 }
 @media (prefers-reduced-motion: reduce) {
-  .ethereal__motion { filter: blur(4px); }
+  .ethereal__motion { animation: none; }
 }
 
 /* ---------- Smooth section transitions ----------

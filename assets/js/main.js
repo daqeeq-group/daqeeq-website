@@ -64,20 +64,6 @@ if ('IntersectionObserver' in window && revealEls.length) {
   revealEls.forEach((el) => el.classList.add('in-view'));
 }
 
-// Ethereal shadow animation — loops the turbulence hue 0..360 (scale 100, speed 90)
-const etherealHue = document.getElementById('ethereal-hue');
-if (etherealHue && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const LOOP_MS = 5840;
-  let start;
-  const tick = (now) => {
-    if (start === undefined) start = now;
-    const value = (((now - start) % LOOP_MS) / LOOP_MS) * 360;
-    etherealHue.setAttribute('values', String(value));
-    requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-}
-
 // Footer year
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();

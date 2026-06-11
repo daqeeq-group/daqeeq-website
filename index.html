@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/style.css?v=5" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=6" />
 </head>
 <body>
 
@@ -22,7 +22,7 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#top" class="nav__brand" aria-label="Daqeeq home">
-        <img class="nav__logo" src="/assets/img/logo.png" alt="Daqeeq" />
+        <img class="nav__logo" src="/assets/img/logo-sm.png" alt="Daqeeq" width="168" height="168" />
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="#products">Products</a>
@@ -38,19 +38,6 @@
   </header>
 
   <main id="top">
-
-    <!-- Shared SVG filter for the ethereal shadow effect -->
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-      <defs>
-        <filter id="ethereal">
-          <feTurbulence result="undulation" numOctaves="2" baseFrequency="0.0005,0.002" seed="0" type="turbulence" />
-          <feColorMatrix id="ethereal-hue" in="undulation" type="hueRotate" values="180" />
-          <feColorMatrix in="dist" result="circulation" type="matrix" values="4 0 0 0 1  4 0 0 0 1  4 0 0 0 1  1 0 0 0 0" />
-          <feDisplacementMap in="SourceGraphic" in2="circulation" scale="100" result="dist" />
-          <feDisplacementMap in="dist" in2="undulation" scale="100" result="output" />
-        </filter>
-      </defs>
-    </svg>
 
     <!-- ===== HERO ===== -->
     <section class="hero">
@@ -122,7 +109,7 @@
             </ul>
           </div>
           <div class="product__visual" data-reveal>
-            <img class="product__shot" src="/assets/img/app-review.png" alt="Daqeeq app showing a restaurant review with a Daqeeq Rating" loading="lazy" />
+            <img class="product__shot" src="/assets/img/app-review.webp" alt="Daqeeq app showing a restaurant review with a Daqeeq Rating" width="660" height="1390" loading="lazy" decoding="async" />
           </div>
         </article>
 
@@ -147,7 +134,7 @@
             <div class="mac">
               <div class="mac__screen">
                 <span class="mac__camera" aria-hidden="true"></span>
-                <img src="/assets/img/dashboard.png" alt="Daqeeq Business dashboard showing unified analytics" loading="lazy" />
+                <img src="/assets/img/dashboard.webp" alt="Daqeeq Business dashboard showing unified analytics" width="1280" height="764" loading="lazy" decoding="async" />
               </div>
               <div class="mac__base" aria-hidden="true"></div>
             </div>
@@ -259,7 +246,7 @@
     <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <img class="footer__logo" src="/assets/img/logo.png" alt="Daqeeq" />
+        <img class="footer__logo" src="/assets/img/logo-sm.png" alt="Daqeeq" width="168" height="168" loading="lazy" />
       </div>
       <p class="footer__tag">Built in Kuwait. Designed for the world.</p>
       <nav class="footer__links" aria-label="Legal">
@@ -272,6 +259,6 @@
     </footer>
   </div>
 
-  <script src="/assets/js/main.js?v=4" defer></script>
+  <script src="/assets/js/main.js?v=6" defer></script>
 </body>
 </html>
